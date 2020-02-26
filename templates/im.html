@@ -1,0 +1,21 @@
+{% extends "base.html"%}
+
+{% block main%}
+    {% if list == 'ol' %}
+        <ol>
+            {% for i in profs %}
+                <li>{{ i }}</li>
+            {& endfor}
+        </ol>
+    {% elif list == 'ul' %}
+        <ul>
+            {% for i in profs %}
+                <li>{{ i }}</li>
+            {& endfor}
+        </ul>
+    {% else %}
+        <h4>НЕВЕРНЫЙ ПАРМАТЕР</h4>
+    {% enfif %}
+
+
+{% endblock%}
